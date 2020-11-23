@@ -17,7 +17,9 @@
         <div class="layui-card-header">修改用户信息</div>
         <div class="layui-card-body">
             <!-- form 表单区域 -->
-            <form class="layui-form" action="">
+            <form class="layui-form" lay-filter="formUserInfo">
+                <!-- 这是隐藏域 -->
+                <input type="hidden" name="id">
                 <div class="layui-form-item">
                     <label class="layui-form-label">登录名称</label>
                     <div class="layui-input-block">
@@ -42,18 +44,20 @@
                 <div class="layui-form-item">
                     <div class="layui-input-block">
                         <button class="layui-btn" lay-submit lay-filter="formDemo">提交修改</button>
-                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        <button type="reset" class="layui-btn layui-btn-primary" id="btnReset">重置</button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
+    <script src="/assets/lib/layui/layui.all.js"></script>
     <!-- 导入 layui 的JS文件 -->
     <script src="/assets/lib/jquery.js"></script>
     <script src='/assets/js/baseAPI.js'></script>
+    <script src="/assets/js/user.js"></script>
 
 
-    <script src="/assets/lib/layui/layui.all.js"></script>
+
 
 
 </body>
